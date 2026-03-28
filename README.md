@@ -17,15 +17,15 @@ Users can browse jobs, apply for positions, and companies can post job listings.
 
   * Post new job listings
   * Edit and delete jobs
-* 🔎 Search and filter jobs
-* 🗂 Organized job categories
+  * 🔎 Search and filter jobs
+  * 🗂 Organized job categories
 
 ---
 
 ## 🛠️ Tech Stack
 
 * **Backend:** Django (Python)
-* **Database:** SQLite (default) / PostgreSQL (optional)
+* **Database:** SQLite (default) 
 * **Frontend:** HTML, CSS, JavaScript
 * **Authentication:** Django built-in auth syste
 
