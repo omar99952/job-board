@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 # Create your models here.
 
 Job_Type = (
@@ -13,6 +14,7 @@ def save_photo(instance,file_name):
 
 class job(models.Model):
     # Properties
+    owner = models.ForeignKey(User, verbose_name=("owner"), on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     job_type = models.CharField(max_length=15,choices = Job_Type)
     description = models.TextField(max_length = 50)
@@ -50,6 +52,7 @@ class Applications(models.Model):
     website = models.URLField(max_length=50)
     cv = models.FileField(upload_to="apply/")
     coverletter = models.TextField(max_length=200)
+    created_at = models.DateTimeField( auto_now=True)
 
     def __str__(self):
         return self.name

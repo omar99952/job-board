@@ -1,0 +1,240 @@
+.big {
+    height: 1000px;
+    background-image: url(p.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 90% 13%;
+    background-size: 150px;
+}
+.text{
+    
+    
+    padding-top: 100px;
+    font-size: 15px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    /* font-family: fantasy; */
+    margin-left: 10px;
+    font-weight: 50;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    border-bottom: 3px solid #4c4a4a;
+    padding: 0 20px;
+    left:0px;
+    border-radius: 10px;
+    margin-bottom: 200px;
+    box-shadow: 0 4px 6px rgba(124, 123, 123, 0.3); 
+    z-index:1000;
+    background-color: #fff;
+    
+}
+.fcai{
+    display: inline;
+    margin:0;
+    font-size:xx-large;
+    font-family: "Sofia", sans-serif;
+}
+
+button{
+    margin :10px;
+    border: 2.5px solid black;
+    background-color: #fff;
+    border-radius: 5px;
+    height:40px;
+    width: 88px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    border: 2.5px solid rgb(7, 7, 7);
+    background-color: #000000;
+    color:#fff;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.btn{
+    margin-right: 30px;
+
+}
+
+p.footer{
+    
+    width: 640px;
+    position: relative;
+    top: 148px;
+    left: 584px;
+    font-style: italic;
+    font-weight: 500;
+    color: #fff;
+    height: 30px;
+    
+}
+
+footer{
+    
+    background-color: rgb(21, 255, 0);
+    width:100%;
+    height: 10px;
+    margin:0;
+    padding: 0;
+    
+    color: #fff;
+    padding: 20px 0 180px;
+    font-family: SupercellText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.horiz-list{
+    list-style-type: none; /* Hides the bullets */
+    display: inline; /* Aligns list items in a row */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: center;
+
+}
+
+
+
+.options li {
+    position: relative; /* Needed for shadow effect */
+    padding: 10px 15px; /* Adds padding to make it look more like a button */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    border-radius: 12px; /* Adds slight rounding to the corners */
+    margin-right: 20px; /* Adds space between the items */
+    padding: 10px; /* Adjust padding as needed */
+    display: inline;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+}
+.options li:hover {
+    position: relative;
+    background-color: #f5f5f5; /* Slightly changes the background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Adds a shadow effect*/
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    border:1px solid rgb(184, 184, 184)
+}
+
+
+
+footer{
+    text-align: center;
+    position: relative;
+}
+.horiz-list{
+    position: absolute;
+    top:152px;
+    right: calc(1268px /2);
+}
+.horiz-list li{
+    display: inline-block;
+    margin-left: 22px;
+}
+
+.horiz-list li:last-child {
+    margin-right: 0; /* Removes the margin from the last item */
+}
+
+
+hr{
+    position: relative;
+    margin-top: 50px;
+}
+
+.parent{
+    background: #ffffff;
+    border-radius: 1000px;
+    height: 46px;
+    border: solid .5px rgb(0 0 0 / .1);
+}
+
+.parent div {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 1%;
+    width: 18.8%;
+    text-align: center;
+    float: left;
+    border-radius: 20px;
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+}
+
+.clear{
+    clear: both;
+}
+
+.parent div:hover{
+    position: relative;
+    /* top: -5px; */
+    background-color: #101010;
+    color: rgb(243, 241, 241);
+}
+
+.ch:checked +label{
+    color:rgb(12, 233, 38);
+    font-size: medium;
+}
+input{
+    border: 1px solid red;
+}
+input:focus {
+    border-color:  rgb(0, 0, 0);
+}
+.parent1{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.user{
+    
+    float: left;
+    background-color: #eee;
+    font-size: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 63px;
+    height: 63px;
+    text-align: center;
+}
+.one{
+    float: left;
+    background-color: #eee;
+    height: 74px;
+    width: 600px;
+    padding: 5px;
+    border-right: solid 5px rgb(0, 0, 0);
+    
+}
+/* .one .pipline{
+    back
+} */
+
+
+
+
+
+
+
