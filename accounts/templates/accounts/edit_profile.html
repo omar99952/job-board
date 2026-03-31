@@ -29,9 +29,10 @@
                         <h4>Post A Job</h4>
                         <form  method="Post" enctype= "multipart/form-data">
                             {% csrf_token %}
-                            {% bootstrap_form job_form %}
+                            {% bootstrap_form userform %}
+                            {% bootstrap_form profileform %}
                             {% buttons %}
-                            <button class="boxed-btn3 w-100" type="submit">Post Now</button>
+                            <button class="boxed-btn3 w-10" type="submit">Post Now</button>
                                 
                             {% endbuttons %}
                             
