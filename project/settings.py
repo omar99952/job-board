@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'contact',
     'django_filters',
-]
+    "rest_framework",]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

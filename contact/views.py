@@ -12,9 +12,9 @@ def contact(request):
         
         send_mail(
         subject,
-        message,
-        settings.EMAIL_HOST_USER,
-        [email],
+        f'{email} has send you the message below: \n{message}',
+        email,
+        [settings.EMAIL_HOST_USER],
         fail_silently=False,
         )
     return render(request,'contact/contact.html',{})
