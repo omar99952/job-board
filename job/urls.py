@@ -10,5 +10,7 @@ urlpatterns = [
     path('<str:slug>',views.get_job_detail,name='job_detail'),
     
     ##api 
-    path('api/list',api.get_alljobs,name= 'get_alljobs'),
+    path('api/list',api.get_alljobs,name= 'get_alljobs'),  
+    
+    
 ]
