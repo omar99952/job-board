@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- <link rel="stylesheet" href="'css/responsive.css"> -->
+     {% comment %} <link rel="stylesheet" href="{% static'css/responsive.css' %}">  {% endcomment %}
 </head>
 
 <body>
@@ -68,7 +68,7 @@
                                                     <li><a href="single-blog.html">single-blog</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="{% url 'contact:contact'%}">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>

@@ -3,13 +3,21 @@ from django.urls import reverse
 from .models import job 
 from django.core.paginator import Paginator
 from .form import Applyform ,Jobform
+from django.contrib.auth.decorators import login_required
+import django_filters
+from .filters import JobFilter
 # Create your views here.
 def get_all_jobs(request):
     all_jobs=job.objects.all()
+    
+    myfilter = JobFilter(request.GET , queryset=all_jobs)
+    all_jobs = myfilter.qs
+    
     paginator = Paginator(all_jobs,3)
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
-    context = {"jobs": page_obj ,"real_jobs": all_jobs}
+    
+    context = {"jobs": page_obj ,"real_jobs": all_jobs,"filterform":myfilter}
     return render(request,"job/jobs.html",context)
 
 def get_job_detail(request,slug):
@@ -27,6 +35,7 @@ def get_job_detail(request,slug):
     context = { "job" :job_detail , 'form' : form}
     return render(request,"job/job_detail.html",context)
 
+@login_required
 def add_job(request):
    if request.method == 'POST':
     job_form = Jobform(request.POST , request.FILES)
