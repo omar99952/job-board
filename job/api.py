@@ -1,5 +1,5 @@
 # views in rest
-
+from rest_framework import generics
 from rest_framework.response import Response
 from .models import job
 from .serializers import Jobserializer
@@ -12,3 +12,15 @@ def get_alljobs(request):
     data = Jobserializer(all_jobs,many=True).data
     
     return Response({"data":data})
+
+
+
+class JoblistView(generics.ListCreateAPIView):
+    queryset = job.objects.all()
+    serializer_class = Jobserializer
+    
+    
+class Job_detail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = job.objects.all()
+    serializer_class = Jobserializer
+    lookup_field = 'id'
