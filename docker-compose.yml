@@ -1,0 +1,13 @@
+# setup services
+#  version: '3'
+
+
+services:
+  djangoserver:
+    container_name: backend
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes: # any modification in root folder affect i app folder
+      - .:/app
